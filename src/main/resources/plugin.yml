@@ -1,0 +1,21 @@
+name: FMeriaPolice
+version: '${project.version}'
+main: me.fortibrine.fmeriapolice.FMeriaPolice
+api-version: 1.13
+
+depend: [FMeria]
+
+commands:
+  gethandcuff:
+    description: "Получить наручники"
+  wantedlist:
+    description: "Список нарушителей"
+  wanted:
+    description: "Добавить нарушителя"
+    usage: "/wanted [Никнейм] [Причина]"
+  unwanted:
+    description: "Удалить нарушителя"
+    usage: "/unwanted [Никнейм]"
+  arrest:
+    description: "Арестовать нарушителя"
+    usage: "/arrest [Никнейм]"
