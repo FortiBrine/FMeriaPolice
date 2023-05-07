@@ -1,0 +1,73 @@
+all_block:
+  handcuff: true
+  arrest: true
+
+# if false
+block:
+  handcuff:
+    - home
+    - spawn
+  arrest:
+    - home
+    - spawn
+
+messages:
+  not_player: "Вы не игрок"
+  gethandcuff: "Вы получили наручники"
+  nonpermission: "Ошибка: Вы или не состоите в этой фракции либо у вас слишком низкий ранг."
+  handcuff: "%player1 надел наручники на %player2"
+  unhandcuff: "%player1 снял наручники с %player2"
+  not_online: "Игрок не онлайн!"
+  addwanted: "Добавлено в розыск %player"
+  unwanted: "Убрано из розыска %player"
+  arrest: "Арестовано игрока %player"
+  nothandcuff: "Игрок не в наручниках"
+
+item:
+  material: LEAD
+  name: "Наручники"
+  lore:
+    - "ПКМ по игроку"
+
+jail:
+  world: world
+  x: 0
+  y: 0
+  z: 0
+
+arrest: {}
+arrest_time: {}
+
+wanted:
+  title: "Меню"
+  item:
+    name: "%player"
+    material: NAME_TAG
+    lore:
+      - "Причина: %reason"
+
+jail_title:
+  title: "Вы в тюрьме"
+  subtitle: "Осталось сидеть: %h:%m:%s"
+
+permissions:
+  gethandcuff:
+    factions:
+      - police
+    rank: 3
+  handcuff:
+    factions:
+      - police
+    rank: 3
+  wanted:
+    factions:
+      - police
+    rank: 3
+  unwanted:
+    factions:
+      - police
+    rank: 3
+  arrest:
+    factions:
+      - police
+    rank: 3
