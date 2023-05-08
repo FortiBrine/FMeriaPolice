@@ -66,7 +66,7 @@ public class Listener implements org.bukkit.event.Listener {
             return;
         }
 
-        if (plugin.getHandCuffed(playerClicked)) {
+        if (plugin.getHandCuffed(playerClicked) && !player.isSneaking()) {
             plugin.unhandcuff(playerClicked);
             String message = config.getString("messages.unhandcuff")
                     .replace("%player1", player.getName())
@@ -77,7 +77,7 @@ public class Listener implements org.bukkit.event.Listener {
             player.sendMessage(message);
             playerClicked.sendMessage(message);
 
-        } else {
+        } else if (player.isSneaking() && !plugin.getHandCuffed(playerClicked)) {
             plugin.handcuff(playerClicked);
 
             String message = config.getString("messages.handcuff")
